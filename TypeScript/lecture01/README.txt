@@ -1,0 +1,21 @@
+(codevolution*)
+
+- typescript need to install globally to use (npm i -g typescript)
+- Browser don't understand typescript
+- javascript dynamically typed, typescript statically typed
+- CMD : tsc [filename] (to compile)
+- CMD : tsc [filename] --watch (auto complie when any change made)
+- let need no initialization
+- const need initialization
+- tuple used to store mixed data
+- data type : any (use when not sure about the data type)
+- type inferance : understanding variable type without explicitly declaring the type
+- union type : to declare a variable with multi type
+- add '?' in function parameter to mark as optional
+- optional parameter always need to be after required parameter
+- we can pass object as a parameter in function
+- interface : to solve the problem of 'so many field in an object' to use as parameter of function
+- if 'private' modifier is used in any property in a Class then that property can only be access within that Class
+- even child class also can't access that property
+- if 'protected' modifier is used : child class can access that property
+- in both cases (private and protected) : that property can't be used outside of Class (parent, child)
