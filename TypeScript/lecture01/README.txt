@@ -9,7 +9,7 @@
 - const need initialization
 - tuple used to store mixed data
 - data type : any (use when not sure about the data type)
-- type inferance : understanding variable type without explicitly declaring the type
+- type inferrance : understanding variable type without explicitly declaring the type
 - union type : to declare a variable with multi type
 - add '?' in function parameter to mark as optional
 - optional parameter always need to be after required parameter

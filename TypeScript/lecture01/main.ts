@@ -4,6 +4,8 @@ let message = 'hello world war'
 
 console.log(message)
 
+let abc: string; //decalared
+
 let isNew: boolean = true
 let total: number = 0
 let name: string = 'sakib'
