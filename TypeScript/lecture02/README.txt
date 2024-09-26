@@ -8,3 +8,6 @@
 - type aliases: making own type
 - we can extend interface
 - literal : mainly to fixed a value for a variable
+- CMD : tsc --init (to create config file) 
+- edit 'outDir' in config file to set complied file destination
+- edit 'rootDir' in config file to tell which file to compile
