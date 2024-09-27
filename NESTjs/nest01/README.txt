@@ -41,7 +41,24 @@ Prisma
 - npx prisma migrate dev --name 'Anyname' (it will create table and SQL will be saved)
 - npx prisma migrate push --name 'Anyname' (it will create table and SQL will not be saved)
 - if any change made in Schema we need to run 'npx prisma generate' then 'npx prisma migrate dev --name 'Anyname''
+- Neon Tech Database is used in this project
 
+To integrate database module with API module (module for crud functionality)
+- create database module
+- create database service
+- exports: [DatabaseService] (in database module)
+- import PrismaClient in database service
+- write this code in database service :
+    export class DatabaseService extends PrismaClient implements OnModuleInit {
+        async onModuleInit() {
+            await this.$connect()
+        }
+    }
+- import database module in API module
+- import Prisma in API controller
+- import Prisma and database service in API service
+- add this line in API service : 
+    constructor(private readonly databaseService : DatabaseService){}
 
 
 - app.enableCors() (open to everyone)

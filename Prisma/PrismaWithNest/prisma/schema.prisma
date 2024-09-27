@@ -14,13 +14,41 @@ datasource db {
 }
 
 model Product{
-  id Int @default(autoincrement()) @id
+  id Int @id @default(autoincrement())
   name String @unique
   createdAt DateTime @default(now())
   updateAt DateTime @updatedAt
   price Float
   sale Boolean @default(false)
   availability Availability
+  description Description? // ? mark to use make this optional as description is stored in another table which can be deleted any time
+  reviews Reviews[] // as Empty array is initialized I don't need to put ? mark
+  tags Tag[]
+}
+
+// 1 to 1 (Product-Description)
+model Description {
+  id Int @default(autoincrement()) @id
+  content String 
+  productId Int @unique //act as foreign key
+  product Product @relation(fields: [productId], references: [id]) //create relation between PRODUCT and DESCRIPTION
+}
+
+// 1 to many (Product-Reviews)
+model Reviews {
+  id Int @default(autoincrement()) @id
+  title String 
+  content String
+  rating Int
+  productId Int //act as foreign key
+  product Product @relation(fields: [productId], references: [id]) //create relation between PRODUCT and REVIEWS
+}
+
+// many to many (Product-Tag)
+model Tag {
+  id Int @default(autoincrement()) @id
+  content String
+  product Product[]
 }
 
 enum Availability {
