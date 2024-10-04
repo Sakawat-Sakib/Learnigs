@@ -1,6 +1,6 @@
 topics covered:  (functions)
 
-map
+map (map return undefined for current item when no 'return' execute for that item)
 
 find
 
