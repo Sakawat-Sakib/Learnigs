@@ -1,0 +1,4 @@
+# Select :
+-- Press Ctrl + Shift + L to select all occurrences of the highlighted text in the file at once. 
+# Putting Qoutation in the Start and End at once
+-- Select and Press (') or Select and Press Shift + (")

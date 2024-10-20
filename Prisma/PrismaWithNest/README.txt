@@ -14,6 +14,10 @@ Prisma
 
 
 Relation
-- 1 to 1
+- 1 to 1 (need to add @unique in oneside)
 - 1 to many 
 - many to many (don't have any foreign key)
+
+Note : 
+- in 1 to many (many things need to write in many)
+- in 1 to 1 (similar things need to write in both)
