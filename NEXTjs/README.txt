@@ -75,3 +75,21 @@ In Server we can :
   		title: "Contact Page",
   		description: "This is contact page",
 	};
+----
+- Get path : 
+	import { usePathname } from "next/navigation";
+	const pathname = usePathname();
+
+- Search Param : 
+	import { useSearchParams } from "next/navigation";
+
+- Debounce library :
+	wait till user stop typing 
+	(npm i use-debounce) 
+
+- onClick/ onChange :
+	- write like this when you dont have any parameter : onClick={testFunction}
+	- write like this when you have parameter : onClick={()=>testFunction(params)}
+
+
+

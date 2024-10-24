@@ -113,3 +113,25 @@ const fetchUsers = async () => {
 }
 
 fetchUsers()
+///
+
+
+//Split 
+let text = "How are you doing today?";
+const myArray = text.split(" "); 
+console.log(myArray); // ["How", "are", "you", "doing", "?"]
+
+//slice (returns selected elements in an array, as a new array)
+const fol = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fol.slice(1, 3); slice(Start, End - 1)
+console.log(citrus) // ["Orange", "Lemon"]
+
+//pop (return last item from an array)
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.pop()) // Mango
+
+//push (add item at the end)
+const items = ["Banana", "Orange", "Apple", "Mango"];
+items.push("Kiwi");
+console.log(items)  // "Banana", "Orange", "Apple", "Mango", "Kiwi"
+
