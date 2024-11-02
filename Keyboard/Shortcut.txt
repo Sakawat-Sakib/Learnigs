@@ -6,3 +6,12 @@
 
 #Moving entire line up/down 
 -- Alt+up/down arrow
+
+# copy paste entire line : 
+-- shift+Alt+ Down arrow
+
+#Select enite line : 
+--ctrl+L
+
+#redo (opposite of undo) :
+-- ctrl+Y 
