@@ -26,3 +26,5 @@ Common Folder Structure :
 - <Outlet/> : 
 
 - Any thing derived from a state variable managed by a hook (like useState, useReducer, or a custom hook), when that state variable updates, React will automatically trigger a re-render of the component.
+
+- {pathname} = useLocation() : to store current path
