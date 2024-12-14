@@ -29,5 +29,15 @@
 
 # when a model related to other model and we want all result : 
  const order = await Order.find({user: req.userId}).populate("restaurant").populate("user")
+Note: but if we want reverse relation like getting all User along with respective Orders then this query is not useable. This query is only useable if the Schema directing towards other Schema. Otherwise we need to use 'aggregate' 
+
+# We can create data in so many ways :
+method 1:  (more control on data)
+const user = new User({name: 'John Doe',email: 'john.doe@example.com'}) -> await user.save()
+
+method 2: (less control on data)
+const user = User.create({name: 'Jane Smith',email: 'jane.smith@example.com'})
+
+
 	
 

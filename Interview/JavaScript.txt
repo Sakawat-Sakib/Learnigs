@@ -1,0 +1,51 @@
+# Browser use javascript engine to understand javascript code. i.e Google use V8
+
+# Data Type :
+*Primitive : immutable (when you modify a string, a new string is created instead of altering the original one in the memory) , stored  directly in memory and are compared by value, i.e String, Number, Boolean, null
+*Non-primitive : mutable, stored by reference rather than by value, can store collections of values, i.e Array, Object, Function.
+
+#Scope :
+* Local (i.e inside a function)
+* Global                    
+
+
+#Variable :
+*var: function scoped, not block (i.e if block) scoped
+*let : block scoped, Can be reassigned, Can be declared without initialization, No Redeclaration in Same Scope
+*const : block scoped, Cannot be reassigned, Must be initialized at declaration, No Redeclaration in Same Scope
+NOTE: Without var, let, or const, if not in strict mode, a global variable is created. In strict mode, you will get a ReferenceError.
+
+
+#Hoisting : behavior in JavaScript where variable and function declarations are moved (hoisted) to the top of their containing scope during the compilation phase
+*let and const variables are hoisted but remain uninitialized, leading to a ReferenceError if accessed before the declaration.
+*var variables are hoisted and initialized with undefined/null, allowing access but returning undefined/null.
+*Named function are fully hoisted, meaning they can be called before they are defined.
+*Function Expression and Arrow function are hoisted but not initialized, resulting in a TypeError if called before the declaration.
+
+
+#Loops(6) :
+*for: iterate a block of code a specific number of times
+*while: may iterate forever 
+*do-while: similar to while but code will execute at least one even condition false
+*for..of: for(let val of arr) {console.log(val)} -- (similar to foreach)
+*for..in: for(let key in person) {console.log(person[key])} --(mainly used for Object)
+*forEach: arr.forEach((item,index)=>{ ..... ..... ..... }) -- (works like both for-of and for-in, mainly used for array)
+
+#Traverse through Objects :
+*key only : Object.keys(obj).forEach((key)=>{... .. .. ...})
+*key & value : Object.entries(student).forEach(([key, value]) => {.. ... ... ...})
+
+#Type coercion: process of converting a value from one data type to another i.e "5" -> 5
+
+#Functions(7):
+*Named: function sum(a,b){.. ... .. . .. }
+*Anonymous: function(a,b){... .. .  ... ..}(3,5)
+*Function Expression: const add = function(a,b){.. ... .. .. ... . . .. }
+*Arrow: const add = (a,b) => {... . . .... ...}
+*IIFE:
+*Callback: function that is passed as an Argument
+*Higher-Order: who use the callback function as a parameter
+
+#AJAX: see ajax folder
+
+#Class and Object (OOP): Later

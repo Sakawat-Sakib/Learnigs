@@ -1,0 +1,2 @@
+#Hook : 
+useMemo : for caching. function not loaded on re-render. Only loaded when dependency change. Performance Optimization.
