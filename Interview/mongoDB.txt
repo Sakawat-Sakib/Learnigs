@@ -1,0 +1,17 @@
+#NoSQL = Not Only SQL
+
+#When to use RDBMS/MongoDB
+RDBMS: Complex data (banking data)
+MongoDB: Large volume of data , High Speed (Chat data)
+
+#Projection: 
+Which fields should be returned
+
+#Indexing: (create index tree)
+Sorting the field for fast searching
+
+#Mongoose: (Library)
+Advantage:
+* Data validation
+* Middleware Support
+* Define relationship btw collection

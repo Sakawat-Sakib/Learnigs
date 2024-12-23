@@ -1,0 +1,8 @@
+#Node.js : Runtime environment for javascript
+#V8: A javascript engine used in Google to run javascript code
+#Express.js: Framework built on the top of Node.js
+
+#Node features:
+*Single Threaded
+*Asynchronous
+*Event Driven Architecture

@@ -1,0 +1,48 @@
+#Released: 2016
+
+#Nextjs can be used with Redux
+
+#React can only used for Frontend but Nextjs cover both Frontend and Backend
+
+
+* SSR: Server-side renderingg i.e direct data fetching
+* CSR: Client side rendering i.e using useEffect
+* SSG: Static site generation, use this feature when Content is rarely updated. If the content changes, you'll need to manually rebuild the site
+*Incremental Static Regeneration: ISR is a feature in Next.js that allows static sites to be pre-generated at build time while still enabling updates without needing to redeploy the entire site.
+* File-based routing
+* API endpoint
+ 
+Note: Client components cannot be async because they need to be able to render immediately in the browser.
+
+#Imperative vs Declarative :
+* Imperative: Like giving step-by-step driving directions. i.e C,C++
+* Declarative: Like telling a taxi driver your destination. i.e React
+
+#Two ways of Pre-rendering
+*Static Generation : generate HTML at build time
+*Server-Side-Rendering : server send rendered page to client
+
+#Revalidate 
+* used to enable Incremental Static Regeneration (ISR) in Next.js. It allows you to regenerate static pages in the background after a specified time without rebuilding the entire app. Example : 
+const res = await fetch('https://api.example.com/data', {
+    next: { revalidate: 60 }, // Revalidate every 60 seconds
+  });
+
+#revalidatePath:  ensure that the page reflects the latest data during the next user request.
+#Stale : means that the cached version of a page is no longer guaranteed to have the latest data and might be out of date.
+Note: Without revalidatePath, Next.js would serve stale cached data even if cache: "no-cache" is set.
+
+#next/link : similar to a html tag
+#next/router : redirect programmatically
+#next/image : similar to html tag. 
+
+#Environment variable:
+.env : This file contains common variables shared across all environments.
+.env.local : This file is meant for local development-specific variables.
+.env.production : This file contains production-specific variables.
+
+#SWR : is data fetching library. Benefits: 
+*SWR allows you to show stale data initially while fetching fresh data in the background, reducing the perceived loading time for the user.
+*Data fetched using SWR is automatically cached, meaning future requests will fetch the data from the cache if available.
+*SWR handles data revalidation, meaning it checks the cache and updates stale data when necessary.
+*SWR provides built-in error handling

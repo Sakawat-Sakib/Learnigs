@@ -1,2 +1,44 @@
+#DOM: 
+* a programming interface that represents the structure of an HTML as tree
+
+#Virtual DOM: 
+*a lightweight copy of the actual DOM in memory
+*"diffing" algorithm calculates the minimal set of updates needed.
+
+#JSX(JavaScript XML): 
+Where write javascript and HTML together, Babel library convert JSX to JS
+
+#State/StateLess/StateFul:
+*State: Current data
+*StateLess: Not re-render the data in the UI 
+*StateFul: re-render the data in the UI 
+
+#Component:
+*Reusable building block
+
+#Scope A (before function component): Runs once when the file/module is imported or evaluated. Exists outside the component's context and cannot directly access component-specific data (like 	props or state). Defined once and reused across renders. Cannot use React hooks (useState, useEffect, etc.).
+
+#Scope B (after function component but before return statement): Runs every time the component is rendered. Exists inside the component's context and has access to props, state, and other 	component-specific data. Recreated on every render unless memoized. Can use React hooks because it is within the functional component's scope.
+
 #Hook : 
-useMemo : for caching. function not loaded on re-render. Only loaded when dependency change. Performance Optimization.
+
+*useState : In vanila JS, HTML elements are grabed (getElementById) by JS and Modify as required. But in React, HTML elements are not grabed for that reason we need State variable to modify 		HTML by re-rendering. Remember change in any State variable re-render the whole component even part of the code which are not related to that state variable.
+
+*useReducer :  Similar to useState Hook but can maintain state of multiple variable in one useReducer hook.       
+                                       
+*useEffect : It will run always at least ones when the page rendered for the first time. If not include [ ] then it will re-run for change in any state variable. If [ ] included, it will only run for the first 		time. If [ ] included with dependency then it will re-run for the any changes in that dependency. 
+	NOTE: React is designed to rerender components whenever their state or props change. When you fetch data directly outside of useEffect (e.g., at the top level of a component), the fetch 		request will run on every render, potentially leading to Redundant API calls. If the fetch modifies state, it will trigger rerenders and re-execute the fetch endlessly. 
+	NOTE: useEffect run at the very last even after the page has already rendered.
+
+*useLayoutEffect : it is called before useEffect during page rendering even before the page rendered.
+
+*useRef :  Mainly used for manipulate the DOM (like old vanilla JS)
+
+*useContext : Global State management
+
+*useMemo : For caching. function not loaded on re-render. Only loaded when dependency change. Performance Optimization.
+
+*useCallback : Almost similar with useMemo but difference it only cached the function not the function output.
+
+
+

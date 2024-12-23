@@ -92,4 +92,11 @@ In Server we can :
 	- write like this when you have parameter : onClick={()=>testFunction(params)}
 
 
+* In the pages directory, 'api' is a special folder. It is where API routes are defined, and files inside it map to serverless API endpoints.
+* In the app directory, there is no special treatment for an 'api' folder. You can create any folder and name it as you wish.
 
+#There are three ways to communicate with database:
+*Server Action (When backend is not separated): No HTTP request required
+*app/api (When backend is not separated): HTTP request required, used axios or fetch
+*Direct call from Component (when backend is separated): used axios or fetch to call backend api , routes are visible.
+*Separate file for all api route marked as "use server" and create separate function for api call (When backend is separated): used axios or fetch to call backend api , routes are not visible.
