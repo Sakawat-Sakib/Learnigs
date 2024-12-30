@@ -49,3 +49,4 @@ Redux-Toolkit :
     ------ features
 - Slice = collection of logic
 
+Redux Toolkit (RTK): A wrapper around Redux designed to simplify common Redux tasks, reduce boilerplate code, and improve best practices. It is the official, recommended way to use Redux as of now.

@@ -10,9 +10,18 @@ Prisma
 -- need to create model inside schema.prisma file
 
 For SQL
-- npx prisma migrate dev --name 'Anyname' (it will create table and SQL will be saved) |  for MongoDB
+- npx prisma migrate dev --name 'Anyname' (it will create table and SQL will be saved) 
 - npx prisma migrate push --name 'Anyname' (it will create table and SQL will not be saved)
 - if any change made in Schema we need to run 'npx prisma generate' then 'npx prisma migrate dev --name 'Anyname''
+
+Simplified Flow : 
+- npm i @prisma/client 
+- npm i prisma -D
+* npx prisma init
+* npx prisma generate
+* npx prisma migrate dev --name 'Anyname'
+* create database service using Prisma Client
+
 
 For MongoDB
 - 'npx prisma db push' mainly update Database

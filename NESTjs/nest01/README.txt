@@ -1,6 +1,6 @@
 (Dave Gray*)
 
-- CMD : npm i -g @nestjs/cli
+- CMD : npm i -g @nestjs/cli (only once, no need to run this for every new project)
 - CMD : nest new . (to create boilerplate in current directory)
 
 - Nestjs build on express
@@ -42,6 +42,8 @@ Prisma
 - npx prisma migrate push --name 'Anyname' (it will create table and SQL will not be saved)
 - if any change made in Schema we need to run 'npx prisma generate' then 'npx prisma migrate dev --name 'Anyname''
 - Neon Tech Database is used in this project
+
+Note: migration files used for tracking schema changes
 
 To integrate database module with API module (module for crud functionality)
 - create database module
