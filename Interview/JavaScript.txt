@@ -39,12 +39,17 @@ NOTE: Without var, let, or const, if not in strict mode, a global variable is cr
 
 #Functions(7):
 *Named: function sum(a,b){.. ... .. . .. }
-*Anonymous: function(a,b){... .. .  ... ..}(3,5)
+*Anonymous: function(a,b){... .. .  ... ..}(3,5) no hoisting
 *Function Expression: const add = function(a,b){.. ... .. .. ... . . .. }
-*Arrow: const add = (a,b) => {... . . .... ...}
+*Arrow: const add = (a,b) => {... . . .... ...} no hoisting
 *IIFE:
 *Callback: function that is passed as an Argument
 *Higher-Order: who use the callback function as a parameter
+
+#Falsy value : false, undefined, null, NaN, 0, ""
+
+#Closure : A function that defined inside another function. In simple terms, a closure allows a function to "remember" and access variables from its outer scope even after the outer function has finished executing. In the context of closures, the variables of the outer function are private and secure. Manage state. Event Handlers (Source: Bro Code)
+
 
 #AJAX: see ajax folder
 
