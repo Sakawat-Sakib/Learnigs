@@ -46,3 +46,13 @@ Note: Without revalidatePath, Next.js would serve stale cached data even if cach
 *Data fetched using SWR is automatically cached, meaning future requests will fetch the data from the cache if available.
 *SWR handles data revalidation, meaning it checks the cache and updates stale data when necessary.
 *SWR provides built-in error handling
+
+# Server Action is any function that:
+1. 
+
+Is marked with "use server"
+
+2. Executes exclusively on the server
+3. 
+Can be called from both client and server components
+

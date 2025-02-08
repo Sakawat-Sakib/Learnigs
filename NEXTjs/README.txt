@@ -95,8 +95,54 @@ In Server we can :
 * In the pages directory, 'api' is a special folder. It is where API routes are defined, and files inside it map to serverless API endpoints.
 * In the app directory, there is no special treatment for an 'api' folder. You can create any folder and name it as you wish.
 
-#There are three ways to communicate with database:
-*Server Action (When backend is not separated): No HTTP request required
-*app/api (When backend is not separated): HTTP request required, used axios or fetch
-*Direct call from Component (when backend is separated): used axios or fetch to call backend api , routes are visible.
-*Separate file for all api route marked as "use server" and create separate function for api call (When backend is separated): used axios or fetch to call backend api , routes are not visible.
+#There are four main ways to communicate with data in Next.js:
+
+1. Server Actions (When backend is integrated with Next.js) :
+* Direct database operations without HTTP requests
+* Marked with "use server"
+example : 
+	"use server"
+	async function addUser(formData) {
+		await db.users.create({ data: formData })
+	}
+
+2. Server Actions for External APIs :
+* Used when backend is separate but you want to hide API routes
+* Marked with "use server"
+* Makes HTTP requests from server side
+* Keeps sensitive data (tokens, URLs) private
+example : 
+	// actions/users.js
+	"use server"
+	export async function getUsers() {
+		const response = await fetch(`${process.env.API_URL}/users`, {
+			headers: { Authorization: `Bearer ${process.env.API_TOKEN}` }
+		})
+		return response.json()
+	}
+
+3. External API Calls from Client Components :
+* Used when backend is separate from Next.js
+* Makes HTTP requests using fetch/axios
+* API routes are visible in browser network tab
+Example:
+	'use client'
+	async function fetchUsers() {
+		const response = await fetch('https://api.example.com/users')
+		return response.json()
+	}
+
+4. Route Handlers (app/api) :
+* Creates API endpoints within Next.js
+* Can be called using HTTP requests (fetch/axios)
+* Typically used when you want to expose APIs for external use
+example :
+	// app/api/users/route.js
+	export async function GET() {
+		const users = await db.users.findMany()
+		return Response.json(users)
+	}
+
+
+#Next-Auth:
+* <AuthProvider> is only required for client component so that we can use useSession() to get session value but in server component we can get session value in different way (src: Dave Gray)

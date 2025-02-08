@@ -52,6 +52,7 @@
 
 * Checks if at least one element satisfies the condition.
 * Returns true or false.
+* Use for array of Object
 
 ##EVERY :
 * const result = array.every((item) => item > 0);
@@ -64,6 +65,7 @@
 
 * Checks if the array contains a specific value.
 * Returns true or false.
+* Use for array with premitive value (i.e number, string)
 
 ##FINDINDEX :
 * const index = array.findIndex((item) => item > 5);

@@ -10,7 +10,7 @@
 
 
 #Variable :
-*var: function scoped, not block (i.e if block) scoped
+*var: function scoped, not block (i.e if block) scoped, can be redeclared
 *let : block scoped, Can be reassigned, Can be declared without initialization, No Redeclaration in Same Scope
 *const : block scoped, Cannot be reassigned, Must be initialized at declaration, No Redeclaration in Same Scope
 NOTE: Without var, let, or const, if not in strict mode, a global variable is created. In strict mode, you will get a ReferenceError.
@@ -42,7 +42,10 @@ NOTE: Without var, let, or const, if not in strict mode, a global variable is cr
 *Anonymous: function(a,b){... .. .  ... ..}(3,5) no hoisting
 *Function Expression: const add = function(a,b){.. ... .. .. ... . . .. }
 *Arrow: const add = (a,b) => {... . . .... ...} no hoisting
-*IIFE:
+*IIFE: Immediately Invoked Function Expression
+(function () {
+  console.log("This is an IIFE!");
+})();
 *Callback: function that is passed as an Argument
 *Higher-Order: who use the callback function as a parameter
 
@@ -54,3 +57,47 @@ NOTE: Without var, let, or const, if not in strict mode, a global variable is cr
 #AJAX: see ajax folder
 
 #Class and Object (OOP): Later
+
+#Code output : 
+* 
+console.log(+true);  // 1
+console.log(+false);  // 0
+
+console.log(+null);   // 0
+
+console.log(+undefined); // NaN
+
+console.log(+"123");  // 123
+
+console.log(+{});     // NaN
+
+
+* 
+console.log(!"");         // true (empty string is falsy)
+
+console.log(!"hello");    // false (non-empty string is truthy)
+
+console.log(!0);          // true (0 is falsy)
+
+console.log(!1);          // false (1 is truthy)
+
+console.log(!null);       // true (null is falsy)
+
+console.log(!undefined);  // true (undefined is falsy)
+
+
+*
+num+str = str // 1+"3" = 13
+str+str = str // "3"+"4" = 34
+
+*
+eval('10*10+5') // 105 : eval take string and perform operatiion 
+
+# In JavaScript, .call() and .bind() are methods used to explicitly set the 'this' context of a function.
+
+#Curry
+
+# Flat , Flat Map
+
+
+

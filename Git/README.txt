@@ -31,7 +31,7 @@ but it can be done with this command: git merge <branch:from which branch merger
 *Conflict message arises during the pull process when merging remote changes with your local branch if content in same file in same line differ. Difference in different line may not create any problem. They just simply merged.
 *If any developer make a pull request to merge a file and you also make a pull request changing the same file. Assuem first pull request is merged successfully. But problem arise when your pull request going to merge afterwards. 
 
-#Resolve Merge conflict : manual. if forget set javascriptmasetery
+#Resolve Merge conflict : manual. if forget see javascriptmasetery
 
 #Reset: (delete from the commit history)
 *git reset --soft <commit-hash> : Resets the commit history to a specific commit but keeps your changes in the staging area, keep changes in working directory
